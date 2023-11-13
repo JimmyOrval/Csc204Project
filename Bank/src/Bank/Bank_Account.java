@@ -11,7 +11,6 @@ public class Bank_Account implements BankOperations {
 	
 
 	public Bank_Account(int accountNumber, Customer customer, double balance) {
-		super();
 		AccountNumber = accountNumber;
 		this.customer = customer;
 		setBalance(balance);
@@ -76,7 +75,7 @@ public class Bank_Account implements BankOperations {
 
 	@Override
 	public double WithdrawT(double with) {
-		this.balance=this.balance-with-0.2*with;
+		this.balance=this.balance-with-0.02*with;
 		return this.balance;
 	}
 

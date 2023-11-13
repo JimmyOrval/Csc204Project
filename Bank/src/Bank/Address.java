@@ -9,7 +9,6 @@ public class Address {
 	}
 
 	public Address(Address A) {
-		super();
 		this.city = A.city;
 		this.country = A.country;
 	}

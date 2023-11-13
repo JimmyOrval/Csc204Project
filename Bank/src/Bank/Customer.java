@@ -33,11 +33,11 @@ public class Customer {
 		return age;
 	}
 	public void setAge(int age) {
-		if(age<18) {
-			this.age=18;
+		if(age>=18) {
+			this.age=age;
 		}
 		else {
-		this.age = age;
+		System.out.println("Customer age must be above 18.");;
 		}
 	}
 	public Address getAddress() {
@@ -48,7 +48,7 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Customer [name=" + getName()  + ", age=" + getAge() + ", Address=" + Address.getCity()+" "+Address.getCountry() + ", gender=" + getGender()+ "]";
+		return "Customer [name=" + getName()  + ", age=" + getAge() + ", Address=" + Address.getCity()+" - "+Address.getCountry() + ", gender=" + getGender()+ "]";
 	}
 	
 	
