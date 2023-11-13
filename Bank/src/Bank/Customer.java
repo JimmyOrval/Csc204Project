@@ -33,11 +33,11 @@ public class Customer {
 		return age;
 	}
 	public void setAge(int age) {
-		if(age>=18) {
-			this.age=age;
+		if(age<18) {
+			this.age=18;
 		}
 		else {
-		System.out.println("Customer age must be above 18.");;
+		this.age=age;
 		}
 	}
 	public Address getAddress() {
