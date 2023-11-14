@@ -37,7 +37,7 @@ public class Customer {
 			this.age=18;
 		}
 		else {
-		this.age=age;
+			this.age=age;
 		}
 	}
 	public Address getAddress() {
@@ -48,7 +48,7 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Customer [name=" + getName()  + ", age=" + getAge() + ", Address=" + Address.getCity()+" - "+Address.getCountry() + ", gender=" + getGender()+ "]";
+		return "Name: " + getName()  + ", Age: " + getAge() + ", Address: " + Address.getCity()+" - "+Address.getCountry() + ", Gender: " + getGender();
 	}
 	
 	

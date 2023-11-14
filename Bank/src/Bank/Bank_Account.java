@@ -64,24 +64,44 @@ public class Bank_Account implements BankOperations {
 	@Override
 	public double Deposit(double dep) {
 		this.balance=this.balance+dep;
+		System.out.println("Succefully deposited "+dep);
+		System.out.println("New balance: "+this.balance);
+		System.exit(0);
 		return this.balance;
 	}
 
 	@Override
 	public double Withdraw(double with) {
-		this.balance=this.balance-with;
+		if(with<=this.balance) {
+			this.balance=this.balance-with;
+			System.out.println("Succefully withdrawn "+with);
+			System.exit(0);
+		}
+		else {
+			System.out.println("Not enough funds.");
+			System.exit(0);
+		}
 		return this.balance;
 	}
 
 	@Override
 	public double WithdrawT(double with) {
-		this.balance=this.balance-with-0.02*with;
+		if(with<=this.balance) {
+			this.balance=this.balance-0.02*with;
+			System.out.println("Succefully withdrawn "+with+" in addition to "+0.02*with+" tax.");
+			System.exit(0);
+		}
+		else {
+			System.out.println("Not enough funds.");
+			System.exit(0);
+		}
 		return this.balance;
 	}
 
 
 	public String Show(Bank_Account ba) {
-		return String.format("%s%s%s","Bank_Account [AccountNumber=" + ba.getAccountNumber() + ", customer=" + customer.toString() + ", balance=" + balance + "]");
+		return "AccountNumber: " + ba.getAccountNumber() + ", " + customer.toString() + ", Balance = " + balance;
 	}
+	
 
 }
