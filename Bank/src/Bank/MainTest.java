@@ -97,7 +97,7 @@ public class MainTest {
                     
                     }
 
-            case 4:
+            case 4: System.exit(0);
         }
     }
 }
