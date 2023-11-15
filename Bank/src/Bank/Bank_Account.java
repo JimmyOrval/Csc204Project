@@ -66,7 +66,6 @@ public class Bank_Account implements BankOperations {
 		this.balance=this.balance+dep;
 		System.out.println("Succefully deposited "+dep);
 		System.out.println("New balance: "+this.balance);
-		System.exit(0);
 		return this.balance;
 	}
 
@@ -75,11 +74,10 @@ public class Bank_Account implements BankOperations {
 		if(with<=this.balance) {
 			this.balance=this.balance-with;
 			System.out.println("Succefully withdrawn "+with);
-			System.exit(0);
+			System.out.println("New balance: "+this.balance);
 		}
 		else {
 			System.out.println("Balance not sufficient.");
-			System.exit(0);
 		}
 		return this.balance;
 	}
@@ -89,11 +87,9 @@ public class Bank_Account implements BankOperations {
 		if(with<=this.balance) {
 			this.balance=this.balance-(0.02*with+with);
 			System.out.println("Succefully withdrawn "+with+" in addition to "+0.02*with+" tax.");
-			System.exit(0);
 		}
 		else {
 			System.out.println("Balance not sufficient.");
-			System.exit(0);
 		}
 		return this.balance;
 	}

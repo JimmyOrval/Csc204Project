@@ -62,25 +62,28 @@ public class MainTest {
                                     }
                                     switch(choice2) {
                                         case 1: System.out.println("Balance = "+BA.balance);
-                                                System.exit(0);
+                                                    
 
                                         case 2: System.out.println("Enter amount to withdraw:");
                                                 int withATM=sc.nextInt();
                                                 BA.Withdraw(withATM);
+                                                         
 
                                         case 3: System.out.println("Enter amount to deposit:");
                                                 int dep=sc.nextInt();
                                                 BA.Deposit(dep);
+                                                    
 
-                                        case 4: System.out.println(BA.Show(BA));
-                                                System.exit(0);
+                                         case 4: System.out.println(BA.Show(BA));
+                                                    
 
                                         case 5: System.exit(0);
                                     }
+                                }
                                     accFound=true;
                                     break;
                                 }
-                            }
+                            
                         
                         if(accFound) {
                             break;
