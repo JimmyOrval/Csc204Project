@@ -48,7 +48,7 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Name: " + getName()  + ", Age: " + getAge() + ", Address: " + Address.getCity()+" - "+Address.getCountry() + ", Gender: " + getGender();
+		return "Name: " + getName()  + ", Age: " + getAge() + ", " + Address.toString() + ", Gender: " + getGender();
 	}
 	
 	

@@ -78,7 +78,7 @@ public class Bank_Account implements BankOperations {
 			System.exit(0);
 		}
 		else {
-			System.out.println("Not enough funds.");
+			System.out.println("Balance not sufficient.");
 			System.exit(0);
 		}
 		return this.balance;
@@ -92,7 +92,7 @@ public class Bank_Account implements BankOperations {
 			System.exit(0);
 		}
 		else {
-			System.out.println("Not enough funds.");
+			System.out.println("Balance not sufficient.");
 			System.exit(0);
 		}
 		return this.balance;
