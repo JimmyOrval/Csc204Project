@@ -87,7 +87,7 @@ public class Bank_Account implements BankOperations {
 	@Override
 	public double WithdrawT(double with) {
 		if(with<=this.balance) {
-			this.balance=this.balance-0.02*with;
+			this.balance=this.balance-(0.02*with+with);
 			System.out.println("Succefully withdrawn "+with+" in addition to "+0.02*with+" tax.");
 			System.exit(0);
 		}
