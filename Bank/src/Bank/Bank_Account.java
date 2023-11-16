@@ -63,7 +63,7 @@ public class Bank_Account implements BankOperations {
 
 	@Override
 	public double Deposit(double dep) {
-		this.balance=this.balance+dep;
+		setBalance(balance+dep);
 		System.out.println("Succefully deposited "+dep);
 		System.out.println("New balance: "+this.balance);
 		return this.balance;
@@ -72,12 +72,12 @@ public class Bank_Account implements BankOperations {
 	@Override
 	public double Withdraw(double with) {
 		if(with<=this.balance) {
-			this.balance=this.balance-with;
+			setBalance(balance-with);
 			System.out.println("Succefully withdrawn "+with);
 			System.out.println("New balance: "+this.balance);
 		}
 		else {
-			System.out.println("Balance not sufficient.");
+			System.out.println("Balance insufficient.");
 		}
 		return this.balance;
 	}
@@ -85,11 +85,11 @@ public class Bank_Account implements BankOperations {
 	@Override
 	public double WithdrawT(double with) {
 		if(with<=this.balance) {
-			this.balance=this.balance-(0.02*with+with);
+			setBalance(balance-(0.02*with+with));
 			System.out.println("Succefully withdrawn "+with+" in addition to "+0.02*with+" tax.");
 		}
 		else {
-			System.out.println("Balance not sufficient.");
+			System.out.println("Balance insufficient.");
 		}
 		return this.balance;
 	}
