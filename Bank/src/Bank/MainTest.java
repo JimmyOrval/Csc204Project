@@ -118,7 +118,7 @@ public class MainTest {
                                     System.out.println("Please enter ");
                                     
                                 }
-                                if(choice.equals("S") || choice.equals("D") || choice.equals("W") || choice.equals("Dep") || choice.equals("E")) {
+                                else if(choice.equals("S") || choice.equals("D") || choice.equals("W") || choice.equals("Dep") || choice.equals("E")) {
                                     
                                 }
                                 else {
