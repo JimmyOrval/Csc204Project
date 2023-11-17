@@ -10,6 +10,12 @@ public class Customer {
 		setAge(age);
 		Address = address;
 	}
+	public Customer() {
+		this.name=null;
+		this.gender=null;
+		this.age=0;
+		this.Address=new Address();
+	}
 	public Customer(Customer c) {
 		super();
 		this.name = c.name;

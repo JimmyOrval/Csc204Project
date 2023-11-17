@@ -8,6 +8,11 @@ public class Address {
 		this.country = country;
 	}
 
+	public Address() {
+		this.city=null;
+		this.country=null;
+	}
+
 	public Address(Address A) {
 		this.city = A.city;
 		this.country = A.country;

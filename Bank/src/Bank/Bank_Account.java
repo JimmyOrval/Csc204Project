@@ -6,6 +6,8 @@ public class Bank_Account implements BankOperations {
 	double balance;
 	
 	public Bank_Account() {
+		this.AccountNumber=0;
+		this.customer=new Customer();
 		this.balance=0;
 	}
 	
@@ -87,6 +89,7 @@ public class Bank_Account implements BankOperations {
 		if(with<=this.balance) {
 			setBalance(balance-(0.02*with+with));
 			System.out.println("Succefully withdrawn "+with+" in addition to "+0.02*with+" tax.");
+			System.out.println("New balance: "+this.balance);
 		}
 		else {
 			System.out.println("Balance insufficient.");
