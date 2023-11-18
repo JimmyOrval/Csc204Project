@@ -8,10 +8,6 @@ public class MainTest {
         Scanner sc=new Scanner(System.in);
         LinkedList<Bank_Account> Account=new LinkedList<>();
         Queue<Integer> queue=new LinkedList<>();
-        Address add1=new Address("Beirut", "Lebanon");
-        Customer cst1=new Customer("Hani", "Male", 25, add1);
-        Bank_Account bnkAcc1=new Bank_Account(123, cst1, 500);
-        Account.add(bnkAcc1);
         System.err.println("Welcome to Haigazian Bank.");
 
         int choice1=0;
