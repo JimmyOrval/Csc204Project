@@ -77,7 +77,7 @@ public class MainTest {
                                                 int AccNum=0;
                                                 System.out.println("Please enter new Account Number:");
                                                     AccNum=sc.nextInt();
-                                                    boolean f=true;
+                                                    
                                                     for(Bank_Account BA : Account) {
                                                         if(AccNum==BA.getAccountNumber()) {
                                                             do {
@@ -262,7 +262,7 @@ public class MainTest {
                                                             throw new InputChoiceException();
                                                         }
                                                         
-                                                        break;
+                                                        continue;
                                                     }
                                                     
                                                     catch(InputChoiceException e) {}
