@@ -216,7 +216,7 @@ public class MainTest {
                                                         System.out.println("S. Show account information.");
                                                         System.out.println("E. Exit.");
                                                         choice2=sc.next().charAt(0);
-                                                        if(choice2=='C' || choice2=='W' || choice2=='D' || choice2=='S' || choice2=='E') {
+                                                        if(choice2=='C' || choice2=='W' || choice2=='D' || choice2=='S') {
                                                             switch(choice2) {
                                                             case 'C':   System.out.println("Balance = "+BA.balance);
                                                                         break;    
@@ -255,16 +255,18 @@ public class MainTest {
 
                                                             case 'S':   System.out.println(BA.Show(BA));
                                                                         break;
-                                                                        
-
-                                                            case 'E': break;
                                                         }
                                                         
+                                                        
+                                                        }
+                                                        else if(choice2=='E') {
+                                                            break;
                                                         }
                                                         else {
                                                             throw new InputChoiceException();
                                                         }
                                                         
+                                                        break;
                                                     }
                                                     
                                                     catch(InputChoiceException e) {}
@@ -290,10 +292,12 @@ public class MainTest {
                                     
                                 }
                                 
+                                
                                     catch(InvalidAccountNumber an) {
                                         System.out.println("Account does not exist. Please retry or create new account with teller to continue.");
                                         break;
                                     }
+                                    
                                 
                                 }
                                 break;
