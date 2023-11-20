@@ -300,7 +300,7 @@ public class MainTest {
                                 break;
 
                         case 4: try{
-                                    FileWriter fWrite=new FileWriter("Account.txt");
+                                    FileWriter fWrite=new FileWriter("Account.txt", true);
                                     BufferedWriter bWriter=new BufferedWriter(fWrite);
                                     for(Bank_Account BA:Account) {
                                         bWriter.write(BA.Show(BA));
