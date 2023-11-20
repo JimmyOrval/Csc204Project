@@ -3,6 +3,7 @@ import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.io.*;
 public class MainTest {
     public static void main(String[] args) throws InputChoiceException {
         Scanner sc=new Scanner(System.in);
@@ -298,7 +299,20 @@ public class MainTest {
                                 }
                                 break;
 
-                        case 4: System.out.println("Have a nice day!");
+                        case 4: try{
+                                    FileWriter fWrite=new FileWriter("Account.txt");
+                                    BufferedWriter bWriter=new BufferedWriter(fWrite);
+                                    for(Bank_Account BA:Account) {
+                                        bWriter.write(BA.Show(BA));
+                                        bWriter.newLine();
+                                    }
+                                    bWriter.close();
+                                }
+                                catch(IOException e) {
+                                    e.printStackTrace();
+                                }
+                                sc.close();
+                                System.out.println("Have a nice day!");
                                 System.exit(0);
                     }
                 }
